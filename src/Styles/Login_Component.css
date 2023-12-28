@@ -1,0 +1,103 @@
+.Main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f6f6;
+}
+
+.Box1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    align-items: center;
+    gap: 20px;
+
+    background-color: rgba(71, 231, 161, 0.7);
+    width: 37%;
+    height: 500px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.Divider{
+Border-radius: 2px solid #fff;
+width: 4px;
+}
+
+.Box2{
+    
+    justify-content: center;
+    
+    background-color: rgba(71, 231, 161, 0.7);
+    width: 23%;
+    height: 500px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+.Font{
+    font-family: 'Roboto', sans-serif;
+font-style: italic;
+color: #fff;
+font-size: 45px;
+}
+
+
+.input {
+    border: none;
+    outline: none;
+    border-radius: 15px;
+  
+    background-color: #ccc;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+    transition: 300ms ease-in-out;
+    height: 50px;
+    width: 60%;
+  }
+  
+  .input:focus {
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 13px 13px 100px #969696,
+               -13px -13px 100px #ffffff;
+  }
+
+  button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(71, 231, 161, 0.7);
+    box-shadow: 4px 8px 19px -3px  rgba(71, 231, 161, 0.7);
+    transition: all 250ms
+   }
+   
+   button:hover {
+    color: #e8e8e8;
+   }
+   
+   button:hover::before {
+    width: 100%;
+   }
+  
+  
