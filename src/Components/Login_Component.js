@@ -1,7 +1,9 @@
 import React from "react";
 import "../Styles/Login_Component.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Login_Component() {
+  const navigate = useNavigate();
   return (
     <div className="Main">
       <div className="Box1">
@@ -20,7 +22,7 @@ export default function Login_Component() {
           className="input"
           placeholder="Password"
         ></input>
-        <button>Login</button>
+        <button onClick={() => navigate("/home")}>Login</button>
       </div>
       <div className="Divider"></div>
       <div className="Box2">
@@ -34,7 +36,7 @@ export default function Login_Component() {
             }}
           >
             <h2 className="Font">New here?</h2>
-            <button>Signup</button>
+            <button onClick={() => navigate("/signup")}>Signup</button>
           </div>
         </div>
       </div>
