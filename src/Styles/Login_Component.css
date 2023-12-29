@@ -18,6 +18,7 @@
     height: 500px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .Divider{
 Border-radius: 2px solid #fff;
@@ -33,12 +34,13 @@ width: 4px;
     height: 500px;
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 .Font{
-    font-family: 'Roboto', sans-serif;
+font-family: 'Carattere', sans-serif;
 font-style: italic;
 color: #fff;
-font-size: 45px;
+font-size: 60px;
 }
 
 
@@ -46,7 +48,8 @@ font-size: 45px;
     border: none;
     outline: none;
     border-radius: 15px;
-  
+    font-family: 'Carattere', sans-serif;
+    font-size: 25px;
     background-color: #ccc;
     box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
     transition: 300ms ease-in-out;
@@ -69,12 +72,15 @@ font-size: 45px;
     z-index: 1;
     background: #e8e8e8;
     position: relative;
-    font-weight: 1000;
-    font-size: 17px;
+    
+    font-size: 27px;
+    font-weight: bolder;
     -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
     box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
     transition: all 250ms;
     overflow: hidden;
+    font-family: 'Carattere', sans-serif;
+
    }
    
    button::before {
@@ -100,4 +106,5 @@ font-size: 45px;
     width: 100%;
    }
   
+
   
