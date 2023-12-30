@@ -1,4 +1,4 @@
-.Main{
+.SMain{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,12 +6,12 @@
     background-color: #f9f6f6;
 }
 
-.Box1{
+.SBox1{
     display: flex;
     justify-content: center;
     flex-direction: column; 
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 
     background-color: rgba(71, 231, 161, 0.7);
     width: 37%;
@@ -20,12 +20,12 @@
     border-bottom-left-radius: 50px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-.Divider{
+.SDivider{
 Border-radius: 2px solid #fff;
 width: 4px;
 }
 
-.Box2{
+.SBox2{
     
     justify-content: center;
     
@@ -36,7 +36,7 @@ width: 4px;
     border-bottom-right-radius: 50px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-.Font{
+.SFont{
 font-family: 'Carattere', sans-serif;
 font-style: italic;
 color: #fff;
@@ -44,7 +44,7 @@ font-size: 60px;
 }
 
 
-.input {
+.Sinput {
     border: none;
     outline: none;
     border-radius: 15px;
@@ -57,54 +57,13 @@ font-size: 60px;
     width: 60%;
   }
   
-  .input:focus {
+  .Sinput:focus {
     background-color: white;
     transform: scale(1.05);
     box-shadow: 13px 13px 100px #969696,
                -13px -13px 100px #ffffff;
   }
 
-  button {
-    padding: 15px 25px;
-    border: unset;
-    border-radius: 15px;
-    color: #000;
-    z-index: 1;
-    background: #e8e8e8;
-    position: relative;
-    letter-spacing: 2px;
-    font-size: 27px;
-  font-weight: bolder;
-    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-    transition: all 250ms;
-    overflow: hidden;
-    font-family: 'Carattere', sans-serif;
 
-   }
-   
-   button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 0;
-    border-radius: 15px;
-    background-color: #212121;
-    z-index: -1;
-    -webkit-box-shadow: 4px 8px 19px -3px rgba(71, 231, 161, 0.7);
-    box-shadow: 4px 8px 19px -3px  rgba(71, 231, 161, 0.7);
-    transition: all 250ms
-   }
-   
-   button:hover {
-    color: #e8e8e8;
-   }
-   
-   button:hover::before {
-    width: 100%;
-   }
-  
 
   
