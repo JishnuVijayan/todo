@@ -8,20 +8,30 @@ export default function Login_Component() {
     <div className="Main">
       <div className="Box1">
         <h1 className="Font"> Login</h1>
-        <input
-          type="email"
-          autocomplete="off"
-          name="email"
-          className="input"
-          placeholder="Email"
-        ></input>
-        <input
-          type="password"
-          autocomplete="off"
-          name="password"
-          className="input"
-          placeholder="Password"
-        ></input>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            rowGap: 15,
+            width: "65%",
+            paddingLeft: 20,
+          }}
+        >
+          <input
+            type="email"
+            autocomplete="off"
+            name="email"
+            className="input"
+            placeholder="Email"
+          ></input>
+          <input
+            type="password"
+            autocomplete="off"
+            name="password"
+            className="input"
+            placeholder="Password"
+          ></input>
+        </div>
         <button onClick={() => navigate("/home")}>Login</button>
       </div>
       <div className="Divider"></div>

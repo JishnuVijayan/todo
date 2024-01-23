@@ -4,6 +4,11 @@
     align-items: center;
     min-height: 100vh;
     background-color: #f9f6f6;
+    background-image: url("../Assets/1.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 .SBox1{
@@ -13,7 +18,7 @@
     align-items: center;
     gap: 10px;
 
-    background-color: rgba(71, 231, 161, 0.7);
+    background-color: rgba(71, 231, 161, 1);
     width: 37%;
     height: 500px;
     border-top-left-radius: 50px;
@@ -29,7 +34,7 @@ width: 4px;
     
     justify-content: center;
     
-    background-color: rgba(71, 231, 161, 0.7);
+    background-color: rgba(71, 231, 161, 1);
     width: 23%;
     height: 500px;
     border-top-right-radius: 50px;
