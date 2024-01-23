@@ -17,8 +17,7 @@
     flex-direction: column; 
     align-items: center;
     gap: 10px;
-
-    background-color: rgba(71, 231, 161, 1);
+    background-color: rgb(106, 183, 231);
     width: 37%;
     height: 500px;
     border-top-left-radius: 50px;
@@ -32,9 +31,8 @@ width: 4px;
 
 .SBox2{
     
-    justify-content: center;
-    
-    background-color: rgba(71, 231, 161, 1);
+    justify-content: center; 
+    background-color: rgb(106, 183, 231);
     width: 23%;
     height: 500px;
     border-top-right-radius: 50px;
@@ -53,7 +51,7 @@ font-size: 60px;
     border: none;
     outline: none;
     border-radius: 15px;
-    font-family: 'Carattere', sans-serif;
+    
     font-size: 25px;
     background-color: #ccc;
     box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
@@ -68,7 +66,10 @@ font-size: 60px;
     box-shadow: 13px 13px 100px #969696,
                -13px -13px 100px #ffffff;
   }
-
+  .Sinput::placeholder{
+    font-family: 'Carattere', sans-serif;
+    font-size: 25px;
+  }
 
 
   

@@ -51,7 +51,7 @@ export default function Singup_Component() {
             }}
           >
             <h2 className="SFont">Already a user?</h2>
-            <button onClick={() => navigate("/")}>Signup</button>
+            <button onClick={() => navigate("/")}>Login</button>
           </div>
         </div>
       </div>
