@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/Login_Component.css";
 import { useNavigate } from "react-router-dom";
 
 export default function Login_Component() {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <div className="Main">
       <div className="Box1">
@@ -23,6 +25,7 @@ export default function Login_Component() {
             name="email"
             className="input"
             placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
           ></input>
           <input
             type="password"
@@ -30,6 +33,7 @@ export default function Login_Component() {
             name="password"
             className="input"
             placeholder="Password"
+            onChange={(e) => setPassword(e.target.value)}
           ></input>
         </div>
         <button onClick={() => navigate("/home")}>Login</button>

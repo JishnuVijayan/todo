@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/Signup_Component.css";
 import { useNavigate } from "react-router-dom";
 
 export default function Singup_Component() {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [password, setPassword] = useState("");
   return (
     <div className="SMain">
       <div className="SBox1">
@@ -14,6 +18,7 @@ export default function Singup_Component() {
           name="email"
           className="Sinput"
           placeholder="Email"
+          onChange={(e) => setEmail(e.target.value)}
         ></input>
         <input
           type="name"
@@ -21,6 +26,7 @@ export default function Singup_Component() {
           name="FirstName"
           className="Sinput"
           placeholder="Firstname"
+          onChange={(e) => setFirstName(e.target.value)}
         ></input>
         <input
           type="name"
@@ -28,6 +34,7 @@ export default function Singup_Component() {
           name="LastName"
           className="Sinput"
           placeholder="LastName"
+          onChange={(e) => setLastName(e.target.value)}
         ></input>
         <input
           type="password"
@@ -35,6 +42,7 @@ export default function Singup_Component() {
           name="password"
           className="Sinput"
           placeholder="Password"
+          onChange={(e) => setPassword(e.target.value)}
         ></input>
 
         <button onClick={() => navigate("/home")}>Signup</button>
