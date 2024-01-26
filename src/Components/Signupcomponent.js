@@ -8,6 +8,29 @@ export default function Singup_Component() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [password, setPassword] = useState("");
+  const registerUser = async (e) => {
+    e.preventDefault();
+    const response = await fetch("http://localhost:1337/api/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        firstName,
+        lastName,
+        password,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (data.status === "ok") {
+      navigate("/login");
+    }
+
+    console.log(data);
+  };
   return (
     <div className="SMain">
       <div className="SBox1">
@@ -45,7 +68,7 @@ export default function Singup_Component() {
           onChange={(e) => setPassword(e.target.value)}
         ></input>
 
-        <button onClick={() => navigate("/home")}>Signup</button>
+        <button onClick={registerUser}>Signup</button>
       </div>
       <div className="SDivider"></div>
       <div className="SBox2">

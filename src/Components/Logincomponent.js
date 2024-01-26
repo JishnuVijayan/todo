@@ -6,6 +6,30 @@ export default function Login_Component() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const login = async (e) => {
+    e.preventDefault();
+    const response = await fetch("http://localhost:1337/api/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email,
+        password,
+      }),
+    });
+
+    const data = await response.json();
+    if (data.user) {
+      localStorage.setItem("token", data.userF);
+      alert("Login Succesful");
+      navigate("/home");
+    } else {
+      alert("Check Login credentials");
+    }
+    console.log(data);
+  };
+
   return (
     <div className="Main">
       <div className="Box1">
@@ -36,7 +60,7 @@ export default function Login_Component() {
             onChange={(e) => setPassword(e.target.value)}
           ></input>
         </div>
-        <button onClick={() => navigate("/home")}>Login</button>
+        <button onClick={login}>Login</button>
       </div>
       <div className="Divider"></div>
       <div className="Box2">
