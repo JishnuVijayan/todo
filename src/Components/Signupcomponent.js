@@ -26,7 +26,7 @@ export default function Singup_Component() {
     const data = await response.json();
 
     if (data.status === "ok") {
-      navigate("/login");
+      navigate("/");
     }
 
     console.log(data);
