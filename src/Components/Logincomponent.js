@@ -21,8 +21,7 @@ export default function Login_Component() {
 
     const data = await response.json();
     if (data.user) {
-      await localStorage.setItem("token", data.user);
-      console.log("Token stored:", data.user);
+      localStorage.setItem("token", data.user);
       alert("Login Succesful");
       navigate("/home");
     } else {
