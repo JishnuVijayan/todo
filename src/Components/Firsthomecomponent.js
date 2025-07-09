@@ -1,18 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../Styles/FirstHome_component.css";
 
-export default function FirstHome_Component() {
-  const [todos, setTodos] = useState([]);
+export default function FirstHome_Component({ todos }) {
+  // const [todos, setTodos] = useState([]);
   const [inputValue, setInputValue] = useState("");
 
-  const handleTodos = () => {
-    setTodos((prevTodos) => [...prevTodos, inputValue]);
-    setInputValue("");
+  // const handleTodos = () => {
+  //   setTodos((prevTodos) => [...prevTodos, inputValue]);
+  //   setInputValue("");
+  // };
+  // const handleDeleteTodo = (index) => {
+  //   setTodos((prevTodos) => prevTodos.filter((_, i) => i !== index));
+  // };
+  const handleSubmit = async () => {
+    const token = localStorage.getItem("token");
+    try {
+      const response = await fetch("http://localhost:1337/api/home", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-access-token": token,
+        },
+        body: JSON.stringify({
+          todo: inputValue,
+        }),
+      });
+      const data = await response.json();
+      if (data.status === "ok") {
+        console.log("Success");
+      } else {
+        console.error("Failed to submit.", response.statusText);
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
-  const handleDeleteTodo = (index) => {
-    setTodos((prevTodos) => prevTodos.filter((_, i) => i !== index));
-  };
-
   return (
     <div className="HMain">
       <div className="HBox1">
@@ -26,7 +48,7 @@ export default function FirstHome_Component() {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           ></input>
-          <button className="HButton" onClick={handleTodos}>
+          <button className="HButton" onClick={handleSubmit}>
             Submit
           </button>
         </div>
@@ -37,11 +59,11 @@ export default function FirstHome_Component() {
             <h2>No records</h2>
           </div>
         ) : (
-          todos.map((todo, index) => (
-            <div key={index} className="EachTodo">
+          todos.map((todo) => (
+            <div className="EachTodo">
               {todo}
 
-              <button class="dbutton" onClick={() => handleDeleteTodo(index)}>
+              <button class="dbutton">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -88,3 +110,4 @@ export default function FirstHome_Component() {
   );
 }
 
+//onClick={() => handleDeleteTodo(index)}
